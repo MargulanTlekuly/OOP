@@ -1,0 +1,20 @@
+package Problem5;
+
+public class Person {
+    private Gender gender;
+
+    public Person(Gender gender){
+        this.gender = gender;
+    }
+    public Gender getGender(){
+        return gender;
+    }
+    @Override
+    public String toString(){
+        if(gender == Gender.BOY){
+            return "B";
+        }else{
+            return "G";
+        }
+    }
+}
