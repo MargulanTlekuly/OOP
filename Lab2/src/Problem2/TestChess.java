@@ -3,7 +3,6 @@ package Problem2;
 public class TestChess {
     public static void main(String[] args){
         Board board = new Board();
-
         Position start = new Position('A',0);
         Piece rook = new Rook(start);
 
