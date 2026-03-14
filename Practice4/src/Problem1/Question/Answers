@@ -1,0 +1,12 @@
+1. What is the core difference between a class and an interface?
+
+A class describes an object and its state, while an interface defines its behavioral contract.
+Only one class can be inherited, but multiple interfaces can be implemented
+
+2. Can interfaces have fields? If yes, what are the implicit modifiers for them?
+
+Yes, they can. They are implicitly public static final
+
+3. Can a class implement multiple interfaces? Explain why this is useful.
+
+Yes, it allows the object to play different roles
