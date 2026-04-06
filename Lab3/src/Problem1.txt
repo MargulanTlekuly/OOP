@@ -1,0 +1,58 @@
+When to use an Interface vs when to use an abstract class. For each “when” provide extended
+example(s) (with class/interface codes).
+
+1) We use interfaces when multiple unrelated classes need to perform the same behavior.
+An interface only gives a class a contract for “what to do,” but each class writes its own implementation.
+
+Example:
+interface Flyable {
+    void fly();
+}
+
+class Bird implements Flyable {
+    public void fly() {
+        System.out.println("Bird flies");
+    }
+}
+
+class Airplane implements Flyable {
+    public void fly() {
+        System.out.println("Airplane flies");
+    }
+}
+
+2) We use an abstract class when there is explicit inheritance between several classes and they have common
+properties and methods.An abstract class allows us to store common code in one place.
+
+Example:
+abstract class Vehicle {
+    String brand;
+
+    Vehicle(String brand) {
+        this.brand = brand;
+    }
+    void start() {
+        System.out.println(brand + " started");
+    }
+    abstract void move();
+}
+
+class Car extends Vehicle {
+    Car(String brand) {
+        super(brand);
+    }
+
+    void move() {
+        System.out.println("Car drives");
+    }
+}
+
+class Bike extends Vehicle {
+    Bike(String brand) {
+        super(brand);
+    }
+
+    void move() {
+        System.out.println("Bike rides");
+    }
+}
